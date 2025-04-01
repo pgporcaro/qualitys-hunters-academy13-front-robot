@@ -4,7 +4,7 @@
 
 ## 📋 Sobre
 
-Este **Projeto** foi criado para um mini  de CI/CD com Robot Framework usando GitActions
+Este projeto foi desenvolvido como um protótipo de CI/CD utilizando o Robot Framework e GitActions.
 
 ## 🚀 Tecnologias
 - [Python](https://www.python.org/)
@@ -36,3 +36,5 @@ $ cd frontendQualityhunters2025
 
 3. Executando os testes
 $ robot -d log .
+
+Feito por Paulo Gustavo de Andrade Porcaro
