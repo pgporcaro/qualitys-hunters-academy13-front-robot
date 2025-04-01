@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-31T20:34:13.049250" rpa="false" schemaversion="5">
+<suite id="s1" name="Frontend" source="c:\Users\Windows 10\Desktop\FRONTEND_QA.CODERS\frontend\frontend.robot">
+<test id="s1-t1" name="Listar departamentos" line="82">
+<kw name="Abrir o site do QA.Coders">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-31T20:34:13.759665" level="INFO">Opening browser 'chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL_HOME_QACODERS}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-31T20:34:13.758648" elapsed="35.998050"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-31T20:34:49.758095" elapsed="0.683493"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T20:34:55.442782" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T20:34:50.442046" elapsed="5.001239"/>
+</kw>
+<status status="PASS" start="2025-03-31T20:34:13.757057" elapsed="41.686527"/>
+</kw>
+<kw name="Preeencher campo e-mail com um e-mail válido">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-31T20:34:55.446102" elapsed="0.083616"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T20:34:55.531199" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<arg>${EMAIL}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T20:34:55.530235" elapsed="0.319617"/>
+</kw>
+<status status="PASS" start="2025-03-31T20:34:55.445432" elapsed="0.404780"/>
+</kw>
+<kw name="Preencher campo senha com uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T20:34:55.855336" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T20:34:55.854841" elapsed="0.222569"/>
+</kw>
+<status status="PASS" start="2025-03-31T20:34:55.854135" elapsed="0.223656"/>
+</kw>
+<kw name="Clicar com o botão entrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-31T20:34:56.087843" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<arg>xpath=//button[normalize-space(text())='Entrar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T20:34:56.087307" elapsed="0.592962"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T20:35:06.682352" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T20:34:56.680723" elapsed="10.002179"/>
+</kw>
+<status status="PASS" start="2025-03-31T20:34:56.083894" elapsed="10.599297"/>
+</kw>
+<kw name="Clicar no botão cadastro">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-31T20:35:34.340134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-31T20:35:34.341011" level="FAIL">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</msg>
+<arg>${BOTAO_CADASTRO}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-31T20:35:06.686983" elapsed="27.664495">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-31T20:35:34.352023" elapsed="0.000186"/>
+</kw>
+<status status="FAIL" start="2025-03-31T20:35:06.686221" elapsed="27.666413">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<kw name="Clicar no botão departamento">
+<status status="NOT RUN" start="2025-03-31T20:35:34.358934" elapsed="0.000243"/>
+</kw>
+<kw name="Listar todos os departamentos">
+<status status="NOT RUN" start="2025-03-31T20:35:34.359747" elapsed="0.000156"/>
+</kw>
+<status status="FAIL" start="2025-03-31T20:34:13.738976" elapsed="80.621433">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</test>
+<status status="FAIL" start="2025-03-31T20:34:13.060799" elapsed="81.302942"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Frontend" id="s1" pass="0" fail="1" skip="0">Frontend</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

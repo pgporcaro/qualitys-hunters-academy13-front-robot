@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-03-31T21:02:18.140835" rpa="false" schemaversion="5">
+<suite id="s1" name="FRONTEND QA.CODERS" source="C:\Users\Windows 10\Desktop\FRONTEND_QA.CODERS">
+<suite id="s1-s1" name="Frontend" source="C:\Users\Windows 10\Desktop\FRONTEND_QA.CODERS\frontend">
+<suite id="s1-s1-s1" name="Frontend" source="C:\Users\Windows 10\Desktop\FRONTEND_QA.CODERS\frontend\frontend.robot">
+<test id="s1-s1-s1-t1" name="Login com sucesso" line="36">
+<kw name="Abrir o site do QA.Coders">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:02:18.803929" level="INFO">Opening browser 'chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL_HOME_QACODERS}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-31T21:02:18.803505" elapsed="7.004280"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-31T21:02:25.808641" elapsed="0.191188"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:02:31.000641" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:02:26.000150" elapsed="5.000830"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:02:18.802172" elapsed="12.199115"/>
+</kw>
+<kw name="Preeencher campo e-mail com um e-mail válido">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-31T21:02:31.003317" elapsed="0.440322"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:02:31.444351" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<arg>${EMAIL}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:02:31.443942" elapsed="0.222378"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:02:31.002669" elapsed="0.663911"/>
+</kw>
+<kw name="Preencher campo senha com uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:02:31.667853" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:02:31.667505" elapsed="0.125672"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:02:31.667048" elapsed="0.126329"/>
+</kw>
+<kw name="Clicar com o botão entrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:02:31.794588" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<arg>xpath=//button[normalize-space(text())='Entrar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:02:31.794295" elapsed="3.533600"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:02:45.329837" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:02:35.328403" elapsed="10.001660"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:02:31.793833" elapsed="13.536465"/>
+</kw>
+<kw name="Clicar no botão cadastro">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:03:05.692667" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-31T21:03:05.692950" level="FAIL">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</msg>
+<arg>${BOTAO_CADASTRO}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-31T21:02:45.331661" elapsed="20.454271">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-31T21:03:05.786314" elapsed="0.000079"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:02:45.331052" elapsed="20.455561">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-03-31T21:02:18.800956" elapsed="46.986251">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</test>
+<test id="s1-s1-s1-t2" name="Criar uma diretoria" line="43">
+<kw name="Abrir o site do QA.Coders">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:03:05.789860" level="INFO">Opening browser 'chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL_HOME_QACODERS}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-31T21:03:05.789546" elapsed="4.951490"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-31T21:03:10.741664" elapsed="0.116617"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:03:15.859572" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:03:10.858579" elapsed="5.001275"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:03:05.789040" elapsed="10.071103"/>
+</kw>
+<kw name="Preeencher campo e-mail com um e-mail válido">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-31T21:03:15.861357" elapsed="0.049595"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:03:15.911729" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<arg>${EMAIL}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:03:15.911283" elapsed="0.193936"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:03:15.860774" elapsed="0.244687"/>
+</kw>
+<kw name="Preencher campo senha com uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:03:16.109921" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:03:16.109586" elapsed="0.151316"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:03:16.109055" elapsed="0.152094"/>
+</kw>
+<kw name="Clicar com o botão entrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:03:16.263278" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<arg>xpath=//button[normalize-space(text())='Entrar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:03:16.262883" elapsed="0.436069"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:03:26.700829" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:03:16.699413" elapsed="10.001637"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:03:16.262190" elapsed="10.439089"/>
+</kw>
+<kw name="Clicar no botão cadastro">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:03:47.027368" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-31T21:03:47.027588" level="FAIL">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</msg>
+<arg>${BOTAO_CADASTRO}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-31T21:03:26.702489" elapsed="20.326900">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-31T21:03:47.029667" elapsed="0.000060"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:03:26.701921" elapsed="20.327993">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<kw name="Clicar no botão diretorias">
+<status status="NOT RUN" start="2025-03-31T21:03:47.030337" elapsed="0.000058"/>
+</kw>
+<kw name="Clicar no botão nova diretorias">
+<status status="NOT RUN" start="2025-03-31T21:03:47.030677" elapsed="0.000054"/>
+</kw>
+<kw name="Preencher o campo Nome da Diretoria">
+<status status="NOT RUN" start="2025-03-31T21:03:47.030987" elapsed="0.000051"/>
+</kw>
+<kw name="Clicar no botão Salvar Cadastro da nova diretoria">
+<status status="NOT RUN" start="2025-03-31T21:03:47.031319" elapsed="0.000053"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:03:05.788276" elapsed="41.243580">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</test>
+<test id="s1-s1-s1-t3" name="Criar um centro de custo" line="54">
+<kw name="Abrir o site do QA.Coders">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:03:47.034085" level="INFO">Opening browser 'chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL_HOME_QACODERS}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-31T21:03:47.033797" elapsed="6.896367"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-31T21:03:53.930460" elapsed="0.139824"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:03:59.071039" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:03:54.070553" elapsed="5.000670"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:03:47.033393" elapsed="12.038010"/>
+</kw>
+<kw name="Preeencher campo e-mail com um e-mail válido">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:04:19.535710" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-31T21:04:19.535931" level="FAIL">Element 'id=email' not visible after 20 seconds.</msg>
+<arg>${EMAIL}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-31T21:03:59.072459" elapsed="20.465274">Element 'id=email' not visible after 20 seconds.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-31T21:04:19.538053" elapsed="0.000061"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:03:59.071985" elapsed="20.466383">Element 'id=email' not visible after 20 seconds.</status>
+</kw>
+<kw name="Preencher campo senha com uma senha válida">
+<status status="NOT RUN" start="2025-03-31T21:04:19.538997" elapsed="0.000061"/>
+</kw>
+<kw name="Clicar com o botão entrar">
+<status status="NOT RUN" start="2025-03-31T21:04:19.539336" elapsed="0.000052"/>
+</kw>
+<kw name="Clicar no botão cadastro">
+<status status="NOT RUN" start="2025-03-31T21:04:19.543814" elapsed="0.000070"/>
+</kw>
+<kw name="Clicar no botão Centro de Custo">
+<status status="NOT RUN" start="2025-03-31T21:04:19.544192" elapsed="0.000052"/>
+</kw>
+<kw name="Clicar no botão Novo cadastro de Centro de Custos">
+<status status="NOT RUN" start="2025-03-31T21:04:19.544522" elapsed="0.000063"/>
+</kw>
+<kw name="Preencher a tela de novo centro de custo">
+<status status="NOT RUN" start="2025-03-31T21:04:19.544887" elapsed="0.000050"/>
+</kw>
+<kw name="Clicar no botão Salvar Novo Centro de Custo">
+<status status="NOT RUN" start="2025-03-31T21:04:19.545199" elapsed="0.000052"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:03:47.032848" elapsed="32.512889">Element 'id=email' not visible after 20 seconds.</status>
+</test>
+<test id="s1-s1-s1-t4" name=" Criar um departamento" line="65">
+<kw name="Abrir o site do QA.Coders">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:04:19.565514" level="INFO">Opening browser 'chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL_HOME_QACODERS}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-31T21:04:19.565190" elapsed="5.706380"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-31T21:04:25.271881" elapsed="0.152800"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:04:30.435635" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:04:25.424978" elapsed="5.010913"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:04:19.564767" elapsed="10.871357"/>
+</kw>
+<kw name="Preeencher campo e-mail com um e-mail válido">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-31T21:04:30.437331" elapsed="0.045764"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:04:30.483949" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<arg>${EMAIL}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:04:30.483537" elapsed="0.212386"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:04:30.436756" elapsed="0.259368"/>
+</kw>
+<kw name="Preencher campo senha com uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:04:30.697339" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:04:30.697019" elapsed="0.139480"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:04:30.696568" elapsed="0.140195"/>
+</kw>
+<kw name="Clicar com o botão entrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:04:30.841254" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<arg>xpath=//button[normalize-space(text())='Entrar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:04:30.840993" elapsed="0.448594"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:04:41.290484" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:04:31.290039" elapsed="10.000662"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:04:30.840536" elapsed="10.450395"/>
+</kw>
+<kw name="Clicar no botão cadastro">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:01.678502" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-03-31T21:05:01.678744" level="FAIL">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</msg>
+<arg>${BOTAO_CADASTRO}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-31T21:04:41.292673" elapsed="20.387846">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-31T21:05:01.680809" elapsed="0.000061"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:04:41.292115" elapsed="20.388940">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</kw>
+<kw name="Clicar no botão departamento">
+<status status="NOT RUN" start="2025-03-31T21:05:01.681487" elapsed="0.000057"/>
+</kw>
+<kw name="Clicar no botão Novo departamento">
+<status status="NOT RUN" start="2025-03-31T21:05:01.681830" elapsed="0.000053"/>
+</kw>
+<kw name="Preencher a tela de novo cadastro de departamento">
+<status status="NOT RUN" start="2025-03-31T21:05:01.682185" elapsed="0.000060"/>
+</kw>
+<kw name="Clicar no botão Salvar Novo Departamento">
+<status status="NOT RUN" start="2025-03-31T21:05:01.682513" elapsed="0.000052"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:04:19.564107" elapsed="42.118911">Element 'xpath=//span[contains(.,'Cadastros')]' not visible after 20 seconds.</status>
+</test>
+<test id="s1-s1-s1-t5" name="Login com e-mail inválido" line="76">
+<kw name="Abrir o site do QA.Coders">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:01.686792" level="INFO">Opening browser 'chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL_HOME_QACODERS}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-31T21:05:01.686495" elapsed="5.101681"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-31T21:05:06.788516" elapsed="0.115473"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:05:11.920759" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:05:06.904513" elapsed="5.016649"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:01.686065" elapsed="10.235992"/>
+</kw>
+<kw name="Preeencher campo e-mail com um e-mail inválido">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-31T21:05:11.928592" elapsed="0.176198"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:12.105456" level="INFO">Typing text 'sysadmin@qacoders.com123' into text field 'id=email'.</msg>
+<arg>${EMAIL}</arg>
+<arg>${EMAIL_INVALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:05:12.105073" elapsed="0.363726"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:11.928096" elapsed="0.540909"/>
+</kw>
+<kw name="Preencher campo senha com uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:12.471382" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:05:12.471037" elapsed="1.011440"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:12.470582" elapsed="1.012110"/>
+</kw>
+<kw name="Clicar com o botão entrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:13.485338" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<arg>xpath=//button[normalize-space(text())='Entrar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:05:13.485041" elapsed="0.344246"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:05:23.831809" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:05:13.830301" elapsed="10.001696"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:13.484377" elapsed="10.347797"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:01.684580" elapsed="22.148510"/>
+</test>
+<test id="s1-s1-s1-t6" name="Listar departamentos" line="82">
+<kw name="Abrir o site do QA.Coders">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:23.835941" level="INFO">Opening browser 'chrome' to base url 'https://automacao.qacoders-academy.com.br/login'.</msg>
+<arg>${URL_HOME_QACODERS}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-03-31T21:05:23.835644" elapsed="5.285284"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-03-31T21:05:29.121436" elapsed="0.147680"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:05:34.269861" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:05:29.269406" elapsed="5.000674"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:23.835238" elapsed="10.435077"/>
+</kw>
+<kw name="Preeencher campo e-mail com um e-mail válido">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-03-31T21:05:34.271438" elapsed="0.054386"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:34.326489" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<arg>${EMAIL}</arg>
+<arg>${EMAIL_VALIDO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:05:34.326107" elapsed="0.176368"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:34.270884" elapsed="0.231785"/>
+</kw>
+<kw name="Preencher campo senha com uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:34.504843" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${SENHA_VALIDA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:05:34.504523" elapsed="0.135059"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:34.504106" elapsed="0.135669"/>
+</kw>
+<kw name="Clicar com o botão entrar">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:05:34.640911" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<arg>xpath=//button[normalize-space(text())='Entrar']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-03-31T21:05:34.640651" elapsed="0.296341"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-31T21:05:44.939240" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-31T21:05:34.937871" elapsed="10.001556"/>
+</kw>
+<status status="PASS" start="2025-03-31T21:05:34.640226" elapsed="10.299676"/>
+</kw>
+<kw name="Clicar no botão cadastro">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-03-31T21:06:00.328061" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE268B0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/ab06a465e280b8f098808fd695488665/screenshot</msg>
+<msg time="2025-03-31T21:06:04.397614" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE26690&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/ab06a465e280b8f098808fd695488665/screenshot</msg>
+<msg time="2025-03-31T21:06:08.478763" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE27130&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/ab06a465e280b8f098808fd695488665/screenshot</msg>
+<msg time="2025-03-31T21:06:13.107266" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=50919): Max retries exceeded with url: /session/ab06a465e280b8f098808fd695488665/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE26F10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<msg time="2025-03-31T21:06:13.107835" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))</msg>
+<arg>${BOTAO_CADASTRO}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-03-31T21:05:44.940845" elapsed="29.287548">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${BOTAO_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-03-31T21:06:14.228761" elapsed="0.000064"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:05:44.940372" elapsed="29.288655">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))</status>
+</kw>
+<kw name="Clicar no botão departamento">
+<status status="NOT RUN" start="2025-03-31T21:06:14.229593" elapsed="0.000059"/>
+</kw>
+<kw name="Listar todos os departamentos">
+<status status="NOT RUN" start="2025-03-31T21:06:14.230377" elapsed="0.000064"/>
+</kw>
+<status status="FAIL" start="2025-03-31T21:05:23.834583" elapsed="50.396171">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))</status>
+</test>
+<status status="FAIL" start="2025-03-31T21:02:18.231132" elapsed="236.001259"/>
+</suite>
+<status status="FAIL" start="2025-03-31T21:02:18.228859" elapsed="236.005392"/>
+</suite>
+<status status="FAIL" start="2025-03-31T21:02:18.143425" elapsed="236.091865"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="FRONTEND QA.CODERS" id="s1" pass="1" fail="5" skip="0">FRONTEND QA.CODERS</stat>
+<stat name="Frontend" id="s1-s1" pass="1" fail="5" skip="0">FRONTEND QA.CODERS.Frontend</stat>
+<stat name="Frontend" id="s1-s1-s1" pass="1" fail="5" skip="0">FRONTEND QA.CODERS.Frontend.Frontend</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-31T21:06:00.328061" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE268B0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/ab06a465e280b8f098808fd695488665/screenshot</msg>
+<msg time="2025-03-31T21:06:04.397614" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE26690&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/ab06a465e280b8f098808fd695488665/screenshot</msg>
+<msg time="2025-03-31T21:06:08.478763" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE27130&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/ab06a465e280b8f098808fd695488665/screenshot</msg>
+<msg time="2025-03-31T21:06:13.107266" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=50919): Max retries exceeded with url: /session/ab06a465e280b8f098808fd695488665/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E14CE26F10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+</errors>
+</robot>
