@@ -29,10 +29,10 @@ Este **Projeto** foi criado para um mini  de CI/CD com Robot Framework usando Gi
 ## 🎮 Como usar
 ```
 1. Clonando o repositório 
-$ git clone https://github.com/clestonv/robot_api_servrest.git
+$ git clone https://github.com/pgporcaro/frontendQualityhunters2025.git
 
 2. Acessando o diretório do projeto 
-$ cd robot_api_servrest
+$ cd frontendQualityhunters2025
 
 3. Executando os testes
-$ robot -d /result/ tests/
+$ robot -d log .
