@@ -21,7 +21,7 @@ ${BOTAO_NOVO_CENTRO_DE_CUSTO}           id=Novo Cadastro
 ${INPUT_CENTRO_DE_CUSTO}                xpath=(//label[contains(.,'Nome do Centro de Custo*')]/following::input)[1]
 ${NOME_CENTRO_DE_CUSTO}                 BONITA27HUNTERS
 ${SELECT_NOME_DIRETORIA}                id=Diretoria
-${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}    id=save
+${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}    xpath=//button[contains(.,'SALVAR NOVO')]
 ${SETA_ABRIR_CENTRO_CUSTOS}             xpath=(//select[@id='Centro de Custo'])[1]
 #departamento
 ${NOME_DEPARTAMENTO}                    LEZCANO27HUNTERS
