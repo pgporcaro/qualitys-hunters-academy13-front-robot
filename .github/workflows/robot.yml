@@ -6,6 +6,8 @@ jobs:
   tests:
     name: Testes Frontend Robot Framework
     runs-on: ubuntu-24.04
+             mkdir -p ./browser-data
+             robot --variable USER_DATA_DIR:./browser-data/session-$(date +%s) --outputdir results/ .
  
     steps:
     - name: Clonar arquivos do repositório
@@ -39,7 +41,7 @@ jobs:
     runs-on: ubuntu-24.04
     if: always()
     needs: 
-      - test
+      - tests
               
     permissions:
       contents: read
@@ -47,7 +49,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://pgporcaro.github.io/frontend-Quality-hunters-2025/report.html
+      url: https://pgporcaro.github.io/frontendQualityhunters2025/report.html
             
     steps:
       - name: Setup Pages
@@ -67,4 +69,4 @@ jobs:
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
-    
+  
