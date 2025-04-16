@@ -1,5 +1,5 @@
 ***Settings***
-Library  SeleniumLibrary    browser_options=--user-data-dir=/tmp/unique-session
+Library  SeleniumLibrary
 Library  String
 Library  Collections
 
