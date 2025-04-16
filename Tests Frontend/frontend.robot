@@ -19,14 +19,14 @@ ${BOTAO_NOVO_DIRETORIAS}                xpath=//button[contains(.,'Novo Cadastro
 ${INPUT_NOME_DA_DIRETORIA}              xpath=(//label[contains(.,'Nome da Diretoria*')]/following::input)[1]
 ${NOME_DIRETORIA}                       P&G
 ${BOTAO_SALVAR_NOVA_DIRETORIA}          xpath=//button[contains(.,'SALVAR NOVO')]
-${NOME_DIRETORIA_GERADA}                None
+${NOME_DIRETORIA_GERADA}                PAULOPORCARO
 #centro de custo
 ${BOTAO_CENTRO_DE_CUSTO}                xpath=//div[@id='Centro de Custo']
 ${BOTAO_NOVO_CENTRO_DE_CUSTO}           id=Novo Cadastro
 ${INPUT_CENTRO_DE_CUSTO}                xpath=(//label[contains(.,'Nome do Centro de Custo*')]/following::input)[1]
-${NOME_CENTRO_DE_CUSTO}                 L&
+${NOME_CENTRO_DE_CUSTO}                 $P
 ${SELECT_NOME_DIRETORIA}                id=Diretoria
-${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}    xpath=//button[contains(.,'SALVAR NOVO')]
+${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}    xpath=//button[@id='save']
 ${SETA_ABRIR_CENTRO_CUSTOS}             xpath=(//select[@id='Centro de Custo'])[1]
 #departamento
 ${NOME_DEPARTAMENTO}                    LEZCANO27HUNTERS
@@ -163,12 +163,12 @@ Clicar no botão Salvar Cadastro da nova diretoria
     Sleep    5s
 
 Clicar no botão Centro de Custo
-    # Verificar se o elemento está presente na página
-    Wait Until Page Contains Element    xpath=//div[contains(@id, 'Centro de Custo')]    30s
-    # Garantir que o elemento está visível
-    Wait Until Element Is Visible       xpath=//div[contains(@id, 'Centro de Custo')]    20s
-    # Clicar no elemento
-    Click Element                       xpath=//div[contains(@id, 'Centro de Custo')]
+    # Verificar se o botão de Centro de Custo está presente na página
+    Wait Until Page Contains Element    ${BOTAO_CENTRO_DE_CUSTO}    30s
+    # Garantir que o botão está visível
+    Wait Until Element Is Visible       ${BOTAO_CENTRO_DE_CUSTO}    20s
+    # Clicar no botão
+    Click Element                       ${BOTAO_CENTRO_DE_CUSTO}
     Sleep    5s
 
 Clicar no botão Novo cadastro de Centro de Custos
@@ -178,15 +178,15 @@ Clicar no botão Novo cadastro de Centro de Custos
     Sleep    5s
 
 Preencher a tela de novo centro de custo
-    Wait Until Page Contains Element    ${INPUT_CENTRO_DE_CUSTO}    30s
+    Wait Until Page Contains Element    ${INPUT_CENTRO_DE_CUSTO}    10s
     Wait Until Element Is Visible       ${INPUT_CENTRO_DE_CUSTO}
     Input Text                          ${INPUT_CENTRO_DE_CUSTO}    ${NOME_CENTRO_DE_CUSTO}
-    Wait Until Page Contains Element    ${SELECT_NOME_DIRETORIA}    30s
+    Wait Until Page Contains Element    ${SELECT_NOME_DIRETORIA}    10s
     Wait Until Element Is Visible       ${SELECT_NOME_DIRETORIA}
     Select From List By Label           ${SELECT_NOME_DIRETORIA}    ${NOME_DIRETORIA}
     Sleep    2s
     Click Element                       id=save
-    Sleep    15s
+    Sleep    5s
 
 Preencher a tela de novo centro de custo com diretoria gerada
     # Verificar se o campo de nome do centro de custo está presente e visível
@@ -210,7 +210,7 @@ Preencher a tela de novo centro de custo com diretoria gerada
     Sleep    15s
 
 Clicar no botão Salvar Novo Centro de Custo
-    Wait Until Page Contains Element    ${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}    30s
+    Wait Until Page Contains Element    ${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}    20s
     Wait Until Element Is Visible       ${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}    20s
     Click Element                       ${BOTAO_SALVAR_NOVO_CENTRO_DE_CUSTO}
     Sleep    5s
