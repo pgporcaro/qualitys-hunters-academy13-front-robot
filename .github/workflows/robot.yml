@@ -22,7 +22,23 @@ jobs:
         pip install robotframework-requests
         pip install --upgrade robotframework-seleniumlibrary
         pip install Faker
- 
+
+    - name: Install drivers via selenium-manager
+      run: |
+        SELENIUM_MANAGER_EXE=$(python -c 'from selenium.webdriver.common.selenium_manager import SeleniumManager; sm=SeleniumManager(); print(f"{str(sm._get_binary())}")')
+        echo "$SELENIUM_MANAGER_EXE"
+        echo "WEBDRIVERPATH=$($SELENIUM_MANAGER_EXE --browser chrome --debug | awk '/INFO[[:space:]]Driver path:/ {print $NF;exit}')" >> "$GITHUB_ENV"
+        echo "$WEBDRIVERPATH"
+
+    - name: Setup Chrome
+      uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: latest
+      id: setup-chrome
+    - run: |
+        echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
+        ${{ steps.setup-chrome.outputs.chrome-path }} --version
+
     - name: Executando os testes de Frontend do Robot
       run: |
         mkdir -p ./browser-data

@@ -5,7 +5,7 @@ Library  Collections
 
 *** Variables ***
 ${URL_HOME_QACODERS}                    https://qualitys-hunters-front.qacoders.dev.br/login
-${BROWSER}                              edge
+${BROWSER}                              chrome
 ${BROWSER_OPTIONS}                      --user-data-dir=/tmp/unique-session
 ${EMAIL}                                id=email
 ${EMAIL_VALIDO}                         sysadmin@qacoders.com
@@ -17,7 +17,7 @@ ${BOTAO_CADASTRO}                       xpath=//span[contains(.,'Cadastros')]
 ${BOTAO_DIRETORIAS}                     id=Diretorias
 ${BOTAO_NOVO_DIRETORIAS}                xpath=//button[contains(.,'Novo Cadastro')]
 ${INPUT_NOME_DA_DIRETORIA}              xpath=(//label[contains(.,'Nome da Diretoria*')]/following::input)[1]
-${NOME_DIRETORIA}                       PAULOPORCARO&GUSTAVO
+${NOME_DIRETORIA}                       P&G
 ${BOTAO_SALVAR_NOVA_DIRETORIA}          xpath=//button[contains(.,'SALVAR NOVO')]
 #centro de custo
 ${BOTAO_CENTRO_DE_CUSTO}                xpath=//div[@id='Centro de Custo']
@@ -96,7 +96,7 @@ Login com e-mail inválido
 *** Keywords ***
 
 Abrir o site do QA.Coders
-    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    options=add_argument("--headless")
+    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    #options=add_argument("--headless")
     Maximize Browser Window
     Sleep    5
 
