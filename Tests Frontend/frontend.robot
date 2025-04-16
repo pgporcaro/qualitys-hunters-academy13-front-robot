@@ -45,7 +45,7 @@ Login com sucesso
     Clicar com o botão entrar
     Clicar no botão cadastro
 
-Criar uma diretoria
+#Criar uma diretoria
     Abrir o site do QA.Coders
     Preeencher campo e-mail com um e-mail válido 
     Preencher campo senha com uma senha válida
