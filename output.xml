@@ -1,230 +1,236 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-15T22:07:53.645695" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-15T22:23:16.381966" rpa="false" schemaversion="5">
 <suite id="s1" name="Frontend" source="c:\Users\Windows 10\Desktop\FRONTEND_QA.CODERS\Tests Frontend\frontend.robot">
-<test id="s1-t1" name="Criar um centro de custo" line="59">
+<test id="s1-t1" name="Criar um centro de custo" line="61">
 <kw name="Abrir o site do QA.Coders">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:07:55.384217" level="INFO">Opening browser 'chrome' to base url 'https://qualitys-hunters-front.qacoders.dev.br/login'.</msg>
+<msg time="2025-04-15T22:23:17.026076" level="INFO">Opening browser 'chrome' to base url 'https://qualitys-hunters-front.qacoders.dev.br/login'.</msg>
 <arg>${URL_HOME_QACODERS}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-15T22:07:55.360637" elapsed="26.883197"/>
+<status status="PASS" start="2025-04-15T22:23:17.025482" elapsed="6.046169"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-15T22:08:22.244782" elapsed="0.412492"/>
+<status status="PASS" start="2025-04-15T22:23:23.072298" elapsed="0.532885"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-15T22:08:27.658946" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-15T22:23:28.607105" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-15T22:08:22.657729" elapsed="5.001691"/>
+<status status="PASS" start="2025-04-15T22:23:23.605672" elapsed="5.002081"/>
 </kw>
-<status status="PASS" start="2025-04-15T22:07:55.356853" elapsed="32.302860"/>
+<status status="PASS" start="2025-04-15T22:23:17.023528" elapsed="11.584660"/>
 </kw>
 <kw name="Preeencher campo e-mail com um e-mail válido">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${EMAIL}</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T22:08:27.664332" elapsed="0.466507"/>
+<status status="PASS" start="2025-04-15T22:23:28.615266" elapsed="0.074233"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:28.132427" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<msg time="2025-04-15T22:23:28.690526" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
 <arg>${EMAIL}</arg>
 <arg>${EMAIL_VALIDO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T22:08:28.131795" elapsed="0.459932"/>
+<status status="PASS" start="2025-04-15T22:23:28.689960" elapsed="0.534171"/>
 </kw>
-<status status="PASS" start="2025-04-15T22:08:27.663616" elapsed="0.928473"/>
+<status status="PASS" start="2025-04-15T22:23:28.611795" elapsed="0.612708"/>
 </kw>
 <kw name="Preencher campo senha com uma senha válida">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:28.597278" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<msg time="2025-04-15T22:23:29.242202" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${SENHA_VALIDA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T22:08:28.596785" elapsed="0.318387"/>
+<status status="PASS" start="2025-04-15T22:23:29.241490" elapsed="0.237780"/>
 </kw>
-<status status="PASS" start="2025-04-15T22:08:28.595944" elapsed="0.319624"/>
+<status status="PASS" start="2025-04-15T22:23:29.240788" elapsed="0.238944"/>
 </kw>
 <kw name="Clicar com o botão entrar">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:28.930765" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<msg time="2025-04-15T22:23:29.488414" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
 <arg>xpath=//button[normalize-space(text())='Entrar']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T22:08:28.930276" elapsed="0.484638"/>
+<status status="PASS" start="2025-04-15T22:23:29.487845" elapsed="0.131805"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-15T22:08:39.416649" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-04-15T22:23:39.621077" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-15T22:08:29.415842" elapsed="10.001348"/>
+<status status="PASS" start="2025-04-15T22:23:29.620136" elapsed="10.001476"/>
 </kw>
-<status status="PASS" start="2025-04-15T22:08:28.929207" elapsed="10.488716"/>
+<status status="PASS" start="2025-04-15T22:23:29.486986" elapsed="10.135002"/>
 </kw>
 <kw name="Clicar no botão cadastro">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_CADASTRO}</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T22:08:39.424758" elapsed="0.065238"/>
+<status status="PASS" start="2025-04-15T22:23:39.625046" elapsed="0.071432"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:39.490916" level="INFO">Clicking element 'xpath=//span[contains(.,'Cadastros')]'.</msg>
+<msg time="2025-04-15T22:23:39.698394" level="INFO">Clicking element 'xpath=//span[contains(.,'Cadastros')]'.</msg>
 <arg>${BOTAO_CADASTRO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T22:08:39.490444" elapsed="0.255364"/>
+<status status="PASS" start="2025-04-15T22:23:39.697646" elapsed="0.160156"/>
 </kw>
-<status status="PASS" start="2025-04-15T22:08:39.424095" elapsed="0.322058"/>
+<status status="PASS" start="2025-04-15T22:23:39.624081" elapsed="0.234145"/>
 </kw>
 <kw name="Clicar no botão Centro de Custo">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@id, 'Centro de Custo')]</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-15T22:08:39.756323" elapsed="0.151594"/>
+<status status="PASS" start="2025-04-15T22:23:39.861408" elapsed="0.048153"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath=//div[contains(@id, 'Centro de Custo')]</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T22:08:39.908392" elapsed="0.111053"/>
+<status status="PASS" start="2025-04-15T22:23:39.910076" elapsed="0.083968"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:40.020317" level="INFO">Clicking element 'xpath=//div[contains(@id, 'Centro de Custo')]'.</msg>
+<msg time="2025-04-15T22:23:39.995028" level="INFO">Clicking element 'xpath=//div[contains(@id, 'Centro de Custo')]'.</msg>
 <arg>xpath=//div[contains(@id, 'Centro de Custo')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T22:08:40.019895" elapsed="0.518994"/>
+<status status="PASS" start="2025-04-15T22:23:39.994567" elapsed="0.161810"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-15T22:08:45.540621" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-15T22:23:45.158225" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-15T22:08:40.539938" elapsed="5.001114"/>
+<status status="PASS" start="2025-04-15T22:23:40.156796" elapsed="5.001933"/>
 </kw>
-<status status="PASS" start="2025-04-15T22:08:39.755623" elapsed="5.785748"/>
+<status status="PASS" start="2025-04-15T22:23:39.860758" elapsed="5.298339"/>
 </kw>
 <kw name="Clicar no botão Novo cadastro de Centro de Custos">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${BOTAO_NOVO_CENTRO_DE_CUSTO}</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-15T22:08:45.548252" elapsed="0.104005"/>
+<status status="PASS" start="2025-04-15T22:23:45.162217" elapsed="0.044790"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_NOVO_CENTRO_DE_CUSTO}</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T22:08:45.652915" elapsed="0.027893"/>
+<status status="PASS" start="2025-04-15T22:23:45.207467" elapsed="0.037410"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:45.682868" level="INFO">Clicking element 'id=Novo Cadastro'.</msg>
+<msg time="2025-04-15T22:23:45.246018" level="INFO">Clicking element 'id=Novo Cadastro'.</msg>
 <arg>${BOTAO_NOVO_CENTRO_DE_CUSTO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T22:08:45.681288" elapsed="0.182644"/>
+<status status="PASS" start="2025-04-15T22:23:45.245458" elapsed="0.190832"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-15T22:08:50.866524" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-15T22:23:50.437379" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-15T22:08:45.864639" elapsed="5.002360"/>
+<status status="PASS" start="2025-04-15T22:23:45.436719" elapsed="5.001205"/>
 </kw>
-<status status="PASS" start="2025-04-15T22:08:45.546696" elapsed="5.320589"/>
+<status status="PASS" start="2025-04-15T22:23:45.161108" elapsed="5.277197"/>
 </kw>
-<kw name="Preencher a tela de novo centro de custo">
+<kw name="Preencher a tela de novo centro de custo com diretoria gerada">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${INPUT_CENTRO_DE_CUSTO}</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-15T22:08:50.869212" elapsed="0.052906"/>
+<status status="PASS" start="2025-04-15T22:23:50.450654" elapsed="0.033993"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${INPUT_CENTRO_DE_CUSTO}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T22:08:50.922695" elapsed="0.036629"/>
+<status status="PASS" start="2025-04-15T22:23:50.485095" elapsed="0.036297"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:50.960381" level="INFO">Typing text 'L&amp;' into text field 'xpath=(//label[contains(.,'Nome do Centro de Custo*')]/following::input)[1]'.</msg>
+<msg time="2025-04-15T22:23:50.522364" level="INFO">Typing text 'L&amp;' into text field 'xpath=(//label[contains(.,'Nome do Centro de Custo*')]/following::input)[1]'.</msg>
 <arg>${INPUT_CENTRO_DE_CUSTO}</arg>
 <arg>${NOME_CENTRO_DE_CUSTO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-15T22:08:50.959791" elapsed="0.432019"/>
+<status status="PASS" start="2025-04-15T22:23:50.521830" elapsed="0.197761"/>
 </kw>
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${SELECT_NOME_DIRETORIA}</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-15T22:08:51.392361" elapsed="0.035805"/>
+<status status="PASS" start="2025-04-15T22:23:50.720299" elapsed="0.036186"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${SELECT_NOME_DIRETORIA}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-15T22:08:51.428745" elapsed="0.084338"/>
+<status status="PASS" start="2025-04-15T22:23:50.758466" elapsed="0.031739"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-04-15T22:23:50.791142" level="INFO">Diretoria Gerada: None</msg>
+<arg>Diretoria Gerada: ${NOME_DIRETORIA_GERADA}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-04-15T22:23:50.790684" elapsed="0.000710"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2025-04-15T22:08:51.514566" level="INFO">Selecting options from selection list 'id=Diretoria' by label P&amp;G.</msg>
-<msg time="2025-04-15T22:08:52.931044" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-04-15T22:08:52.931591" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: P&amp;G; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<msg time="2025-04-15T22:23:50.792160" level="INFO">Selecting options from selection list 'id=Diretoria' by label None.</msg>
+<msg time="2025-04-15T22:23:51.898330" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-04-15T22:23:51.898989" level="FAIL">NoSuchElementException: Message: Could not locate element with visible text: None; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 </msg>
 <arg>${SELECT_NOME_DIRETORIA}</arg>
-<arg>${NOME_DIRETORIA}</arg>
+<arg>${NOME_DIRETORIA_GERADA}</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="FAIL" start="2025-04-15T22:08:51.513910" elapsed="1.759143">NoSuchElementException: Message: Could not locate element with visible text: P&amp;G; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<status status="FAIL" start="2025-04-15T22:23:50.791678" elapsed="1.111798">NoSuchElementException: Message: Could not locate element with visible text: None; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 </status>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-04-15T22:08:53.276007" elapsed="0.000414"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.903944" elapsed="0.000187"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>id=save</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-04-15T22:08:53.277707" elapsed="0.000406"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.904435" elapsed="0.000163"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>15s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-04-15T22:08:53.280860" elapsed="0.000816"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.905084" elapsed="0.000303"/>
 </kw>
-<status status="FAIL" start="2025-04-15T22:08:50.868581" elapsed="2.420424">NoSuchElementException: Message: Could not locate element with visible text: P&amp;G; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<status status="FAIL" start="2025-04-15T22:23:50.449805" elapsed="1.455929">NoSuchElementException: Message: Could not locate element with visible text: None; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 </status>
 </kw>
 <kw name="Clicar no botão Salvar Novo Centro de Custo">
-<status status="NOT RUN" start="2025-04-15T22:08:53.314628" elapsed="0.032620"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.944135" elapsed="0.000365"/>
 </kw>
 <kw name="Abrir o site do QA.Coders">
-<status status="NOT RUN" start="2025-04-15T22:08:53.380529" elapsed="0.000416"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.951012" elapsed="0.000245"/>
 </kw>
 <kw name="Preeencher campo e-mail com um e-mail válido">
-<status status="NOT RUN" start="2025-04-15T22:08:53.829844" elapsed="0.000316"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.953480" elapsed="0.000218"/>
 </kw>
 <kw name="Preencher campo senha com uma senha válida">
-<status status="NOT RUN" start="2025-04-15T22:08:53.876954" elapsed="0.000313"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.955985" elapsed="0.000235"/>
 </kw>
 <kw name="Clicar com o botão entrar">
-<status status="NOT RUN" start="2025-04-15T22:08:53.895687" elapsed="0.000338"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.959032" elapsed="0.000261"/>
 </kw>
 <kw name="Clicar no botão cadastro">
-<status status="NOT RUN" start="2025-04-15T22:08:53.995496" elapsed="0.000257"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.960187" elapsed="0.000235"/>
 </kw>
 <kw name="Clicar no botão departamento">
-<status status="NOT RUN" start="2025-04-15T22:08:54.088534" elapsed="0.000308"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.963557" elapsed="0.000246"/>
 </kw>
 <kw name="Clicar no botão Novo departamento">
-<status status="NOT RUN" start="2025-04-15T22:08:54.092251" elapsed="0.001823"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.966840" elapsed="0.000241"/>
 </kw>
 <kw name="Preencher a tela de novo cadastro de departamento">
-<status status="NOT RUN" start="2025-04-15T22:08:54.108070" elapsed="0.000458"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.968771" elapsed="0.000172"/>
 </kw>
 <kw name="Clicar no botão Salvar Novo Departamento">
-<status status="NOT RUN" start="2025-04-15T22:08:54.114129" elapsed="0.031033"/>
+<status status="NOT RUN" start="2025-04-15T22:23:51.970411" elapsed="0.000186"/>
 </kw>
-<status status="FAIL" start="2025-04-15T22:07:55.259476" elapsed="58.898584">NoSuchElementException: Message: Could not locate element with visible text: P&amp;G; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+<status status="FAIL" start="2025-04-15T22:23:17.021680" elapsed="34.953908">NoSuchElementException: Message: Could not locate element with visible text: None; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 </status>
 </test>
-<status status="FAIL" start="2025-04-15T22:07:53.659585" elapsed="60.523050"/>
+<status status="FAIL" start="2025-04-15T22:23:16.391227" elapsed="35.617935"/>
 </suite>
 <statistics>
 <total>

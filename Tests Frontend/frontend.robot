@@ -19,6 +19,7 @@ ${BOTAO_NOVO_DIRETORIAS}                xpath=//button[contains(.,'Novo Cadastro
 ${INPUT_NOME_DA_DIRETORIA}              xpath=(//label[contains(.,'Nome da Diretoria*')]/following::input)[1]
 ${NOME_DIRETORIA}                       P&G
 ${BOTAO_SALVAR_NOVA_DIRETORIA}          xpath=//button[contains(.,'SALVAR NOVO')]
+${NOME_DIRETORIA_GERADA}                None
 #centro de custo
 ${BOTAO_CENTRO_DE_CUSTO}                xpath=//div[@id='Centro de Custo']
 ${BOTAO_NOVO_CENTRO_DE_CUSTO}           id=Novo Cadastro
@@ -54,6 +55,7 @@ Criar uma diretoria
     Clicar no botão nova diretorias
     Criar Massa de dados
     Preencher o campo Nome da Diretoria
+    Capturar Nome da Diretoria Gerada
     Clicar no botão Salvar Cadastro da nova diretoria
     
 Criar um centro de custo    
@@ -64,7 +66,7 @@ Criar um centro de custo
     Clicar no botão cadastro
     Clicar no botão Centro de Custo
     Clicar no botão Novo cadastro de Centro de Custos
-    Preencher a tela de novo centro de custo
+    Preencher a tela de novo centro de custo com diretoria gerada
     Clicar no botão Salvar Novo Centro de Custo
     
  #Criar um departamento
@@ -96,7 +98,7 @@ Login com e-mail inválido
 *** Keywords ***
 
 Abrir o site do QA.Coders
-    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    #options=add_argument("--headless")
+    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    options=add_argument("--headless")
     Maximize Browser Window
     Sleep    5
 
@@ -124,9 +126,13 @@ Clicar no botão cadastro
 
 
 Criar Massa de dados
+    # Gerar uma string aleatória de 2 caracteres
     ${palavra_aleatoria}    Generate Random String    length=2    chars=[LETTERS]
+    # Converter para letras maiúsculas
     ${palavra_aleatoria}    Convert To Upper Case    ${palavra_aleatoria}
-    Set Test Variable    ${EMAIL_TESTE}   ${palavra_aleatoria}
+    # Log para verificar a palavra gerada
+    Log    Palavra Aleatória Gerada: ${palavra_aleatoria}
+    # Definir como variável global para uso posterior
     Set Global Variable    ${palavra_aleatoria}
 
 Clicar no botão diretorias
@@ -140,7 +146,16 @@ Clicar no botão nova diretorias
     Click Element                    ${BOTAO_NOVO_DIRETORIAS}
 
 Preencher o campo Nome da Diretoria
-    Input Text                       ${INPUT_NOME_DA_DIRETORIA}    ${NOME_DIRETORIA} ${palavra_aleatoria}
+    # Concatenar o nome base da diretoria com a palavra aleatória
+    ${NOME_DIRETORIA_GERADA}    Set Variable    ${NOME_DIRETORIA}${palavra_aleatoria}
+    # Log para verificar o nome completo gerado
+    Log    Nome da Diretoria Gerada: ${NOME_DIRETORIA_GERADA}
+    # Preencher o campo com o nome gerado
+    Input Text                       ${INPUT_NOME_DA_DIRETORIA}    ${NOME_DIRETORIA_GERADA}
+
+Capturar Nome da Diretoria Gerada
+    # Apenas log para confirmar que o nome já foi capturado
+    Log    Diretoria Gerada: ${NOME_DIRETORIA_GERADA}
 
 Clicar no botão Salvar Cadastro da nova diretoria
     Wait Until Element Is Visible        ${BOTAO_SALVAR_NOVA_DIRETORIA}    20s 
@@ -170,6 +185,27 @@ Preencher a tela de novo centro de custo
     Wait Until Element Is Visible       ${SELECT_NOME_DIRETORIA}
     Select From List By Label           ${SELECT_NOME_DIRETORIA}    ${NOME_DIRETORIA}
     Sleep    2s
+    Click Element                       id=save
+    Sleep    15s
+
+Preencher a tela de novo centro de custo com diretoria gerada
+    # Verificar se o campo de nome do centro de custo está presente e visível
+    Wait Until Page Contains Element    ${INPUT_CENTRO_DE_CUSTO}    30s
+    Wait Until Element Is Visible       ${INPUT_CENTRO_DE_CUSTO}
+    Input Text                          ${INPUT_CENTRO_DE_CUSTO}    ${NOME_CENTRO_DE_CUSTO}
+    
+    # Log para verificar o valor da diretoria gerada
+    Log                                 Diretoria Gerada: ${NOME_DIRETORIA_GERADA}
+    
+    # Verificar se o seletor de diretoria está presente e visível
+    Wait Until Page Contains Element    ${SELECT_NOME_DIRETORIA}    30s
+    Wait Until Element Is Visible       ${SELECT_NOME_DIRETORIA}
+    
+    # Selecionar a diretoria gerada
+    Select From List By Label           ${SELECT_NOME_DIRETORIA}    ${NOME_DIRETORIA_GERADA}
+    Sleep    2s
+    
+    # Salvar o novo centro de custo
     Click Element                       id=save
     Sleep    15s
 
