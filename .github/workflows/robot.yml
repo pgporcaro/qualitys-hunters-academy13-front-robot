@@ -6,9 +6,7 @@ jobs:
   tests:
     name: Testes Frontend Robot Framework
     runs-on: ubuntu-24.04
-             mkdir -p ./browser-data
-             robot --variable USER_DATA_DIR:./browser-data/session-$(date +%s) --outputdir results/ .
- 
+
     steps:
     - name: Clonar arquivos do repositório
       uses: actions/checkout@v4
@@ -27,7 +25,8 @@ jobs:
  
     - name: Executando os testes de Frontend do Robot
       run: |
-        robot --outputdir results/ .
+        mkdir -p ./browser-data
+        robot --variable USER_DATA_DIR:./browser-data/session-$(date +%s) --outputdir results/ .
  
     - name: Test Report
       uses: actions/upload-artifact@v4
@@ -69,7 +68,3 @@ jobs:
       - name: Deploy to Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
-<<<<<<< HEAD
-  
-=======
->>>>>>> d1239422e4a77422b8e176e8634855d2ed04aad8
