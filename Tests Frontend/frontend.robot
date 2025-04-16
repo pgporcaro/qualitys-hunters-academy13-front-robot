@@ -58,7 +58,7 @@ Criar uma diretoria
     Capturar Nome da Diretoria Gerada
     Clicar no botão Salvar Cadastro da nova diretoria
     
-Criar um centro de custo    
+#Criar um centro de custo    
     Abrir o site do QA.Coders
     Preeencher campo e-mail com um e-mail válido 
     Preencher campo senha com uma senha válida
