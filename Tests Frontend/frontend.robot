@@ -14,7 +14,7 @@ ${SENHA_VALIDA}                         1234@Test
 ${SENHA_INVALIDA}                       Test123423@
 ${BOTAO_CADASTRO}                       xpath=//span[contains(.,'Cadastros')]
 #diretoria
-${BOTAO_DIRETORIAS}                     id=Diretorias
+${BOTAO_DIRETORIAS}                     xpath=//span[contains(.,'Diretorias')]
 ${BOTAO_NOVO_DIRETORIAS}                xpath=//button[contains(.,'Novo Cadastro')]
 ${INPUT_NOME_DA_DIRETORIA}              xpath=(//label[contains(.,'Nome da Diretoria*')]/following::input)[1]
 ${NOME_DIRETORIA}                       P&G
@@ -45,7 +45,7 @@ Login com sucesso
     Clicar com o botão entrar
     Clicar no botão cadastro
 
-#Criar uma diretoria
+Criar uma diretoria
     Abrir o site do QA.Coders
     Preeencher campo e-mail com um e-mail válido 
     Preencher campo senha com uma senha válida
@@ -69,7 +69,7 @@ Login com sucesso
     Preencher a tela de novo centro de custo com diretoria gerada
     Clicar no botão Salvar Novo Centro de Custo
     
- #Criar um departamento
+#Criar um departamento
     Abrir o site do QA.Coders
     Preeencher campo e-mail com um e-mail válido 
     Preencher campo senha com uma senha válida
