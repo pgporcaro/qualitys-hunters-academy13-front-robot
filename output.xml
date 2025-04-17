@@ -1,211 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-17T20:24:51.753872" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-04-17T20:42:22.647208" rpa="false" schemaversion="5">
 <suite id="s1" name="Frontend" source="c:\Users\Windows 10\Desktop\FRONTEND_QA.CODERS\Tests Frontend\frontend.robot">
 <test id="s1-t1" name="Criar uma diretoria" line="53">
 <kw name="Abrir o site do QA.Coders">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:24:53.207844" level="INFO">Opening browser 'chrome' to base url 'https://qualitys-hunters-front.qacoders.dev.br/login'.</msg>
+<msg time="2025-04-17T20:42:23.636923" level="INFO">Opening browser 'chrome' to base url 'https://qualitys-hunters-front.qacoders.dev.br/login'.</msg>
 <arg>${URL_HOME_QACODERS}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-17T20:24:53.199006" elapsed="36.319372"/>
+<status status="PASS" start="2025-04-17T20:42:23.636291" elapsed="18.467736"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-04-17T20:25:29.519840" elapsed="0.291506"/>
+<status status="PASS" start="2025-04-17T20:42:42.106217" elapsed="0.482187"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T20:25:34.812873" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-17T20:42:47.591079" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T20:25:29.811819" elapsed="5.001654"/>
+<status status="PASS" start="2025-04-17T20:42:42.589158" elapsed="5.003029"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:24:53.137699" elapsed="41.676106"/>
+<status status="PASS" start="2025-04-17T20:42:23.634278" elapsed="23.958230"/>
 </kw>
 <kw name="Preeencher campo e-mail com um e-mail válido">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${EMAIL}</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T20:25:34.825562" elapsed="0.091656"/>
+<status status="PASS" start="2025-04-17T20:42:47.640495" elapsed="0.185127"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:34.918444" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
+<msg time="2025-04-17T20:42:47.826738" level="INFO">Typing text 'sysadmin@qacoders.com' into text field 'id=email'.</msg>
 <arg>${EMAIL}</arg>
 <arg>${EMAIL_VALIDO}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:34.917860" elapsed="0.385681"/>
+<status status="PASS" start="2025-04-17T20:42:47.826137" elapsed="0.455732"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:34.824783" elapsed="0.481514"/>
+<status status="PASS" start="2025-04-17T20:42:47.639810" elapsed="0.642468"/>
 </kw>
 <kw name="Preencher campo senha com uma senha válida">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:35.355524" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
+<msg time="2025-04-17T20:42:48.291519" level="INFO">Typing text '1234@Test' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${SENHA_VALIDA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:35.354932" elapsed="0.261843"/>
+<status status="PASS" start="2025-04-17T20:42:48.290938" elapsed="0.346065"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:35.354280" elapsed="0.263015"/>
+<status status="PASS" start="2025-04-17T20:42:48.290142" elapsed="0.347283"/>
 </kw>
 <kw name="Clicar com o botão entrar">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:35.650595" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
+<msg time="2025-04-17T20:42:48.662126" level="INFO">Clicking element 'xpath=//button[normalize-space(text())='Entrar']'.</msg>
 <arg>xpath=//button[normalize-space(text())='Entrar']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:35.650064" elapsed="0.263706"/>
+<status status="PASS" start="2025-04-17T20:42:48.661598" elapsed="0.270468"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T20:25:45.915893" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-04-17T20:42:58.938219" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T20:25:35.914323" elapsed="10.002038"/>
+<status status="PASS" start="2025-04-17T20:42:48.936697" elapsed="10.001951"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:35.648965" elapsed="10.267686"/>
+<status status="PASS" start="2025-04-17T20:42:48.660834" elapsed="10.278118"/>
 </kw>
 <kw name="Clicar no botão cadastro">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_CADASTRO}</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T20:25:45.957769" elapsed="0.113534"/>
+<status status="PASS" start="2025-04-17T20:42:58.941545" elapsed="0.076141"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:46.072235" level="INFO">Clicking element 'xpath=//span[contains(.,'Cadastros')]'.</msg>
+<msg time="2025-04-17T20:42:59.018814" level="INFO">Clicking element 'xpath=//span[contains(.,'Cadastros')]'.</msg>
 <arg>${BOTAO_CADASTRO}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:46.071773" elapsed="0.170279"/>
+<status status="PASS" start="2025-04-17T20:42:59.018194" elapsed="0.239249"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:45.956955" elapsed="0.285636"/>
+<status status="PASS" start="2025-04-17T20:42:58.940672" elapsed="0.317158"/>
 </kw>
 <kw name="Clicar no botão diretorias">
 <kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
 <arg>${BOTAO_DIRETORIAS}</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" start="2025-04-17T20:25:46.258733" elapsed="0.126743"/>
+<status status="PASS" start="2025-04-17T20:42:59.267712" elapsed="0.232871"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_DIRETORIAS}</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T20:25:46.386058" elapsed="0.090823"/>
+<status status="PASS" start="2025-04-17T20:42:59.501031" elapsed="0.064460"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:46.478006" level="INFO">Clicking element 'xpath=//span[contains(.,'Diretorias')]'.</msg>
+<msg time="2025-04-17T20:42:59.567073" level="INFO">Clicking element 'xpath=//div[@id='Diretorias']'.</msg>
 <arg>${BOTAO_DIRETORIAS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:46.477376" elapsed="0.160656"/>
+<status status="PASS" start="2025-04-17T20:42:59.566016" elapsed="0.217791"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T20:25:48.639817" level="INFO">Slept 2 seconds.</msg>
+<msg time="2025-04-17T20:43:01.786015" level="INFO">Slept 2 seconds.</msg>
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T20:25:46.638813" elapsed="2.001446"/>
+<status status="PASS" start="2025-04-17T20:42:59.784383" elapsed="2.002050"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:46.258038" elapsed="2.382491"/>
+<status status="PASS" start="2025-04-17T20:42:59.266052" elapsed="2.520657"/>
 </kw>
 <kw name="Clicar no botão nova diretorias">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_NOVO_DIRETORIAS}</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T20:25:48.652066" elapsed="0.176587"/>
+<status status="PASS" start="2025-04-17T20:43:01.799251" elapsed="0.051211"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:48.829637" level="INFO">Clicking element 'xpath=//button[contains(.,'Novo Cadastro')]'.</msg>
+<msg time="2025-04-17T20:43:01.851379" level="INFO">Clicking element 'xpath=//button[contains(.,'Novo Cadastro')]'.</msg>
 <arg>${BOTAO_NOVO_DIRETORIAS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:48.829124" elapsed="0.223658"/>
+<status status="PASS" start="2025-04-17T20:43:01.850919" elapsed="0.204654"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:48.650903" elapsed="0.402255"/>
+<status status="PASS" start="2025-04-17T20:43:01.798604" elapsed="0.258379"/>
 </kw>
 <kw name="Criar Massa de dados">
 <kw name="Generate Random String" owner="String">
-<msg time="2025-04-17T20:25:49.418560" level="INFO">${palavra_aleatoria} = ho</msg>
+<msg time="2025-04-17T20:43:02.127476" level="INFO">${palavra_aleatoria} = yN</msg>
 <var>${palavra_aleatoria}</var>
 <arg>length=2</arg>
 <arg>chars=[LETTERS]</arg>
 <doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<status status="PASS" start="2025-04-17T20:25:49.415627" elapsed="0.007405"/>
+<status status="PASS" start="2025-04-17T20:43:02.120680" elapsed="0.007102"/>
 </kw>
 <kw name="Convert To Upper Case" owner="String">
-<msg time="2025-04-17T20:25:49.424990" level="INFO">${palavra_aleatoria} = HO</msg>
+<msg time="2025-04-17T20:43:02.128660" level="INFO">${palavra_aleatoria} = YN</msg>
 <var>${palavra_aleatoria}</var>
 <arg>${palavra_aleatoria}</arg>
 <doc>Converts string to upper case.</doc>
-<status status="PASS" start="2025-04-17T20:25:49.424125" elapsed="0.001551"/>
+<status status="PASS" start="2025-04-17T20:43:02.128198" elapsed="0.000644"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-17T20:25:49.495441" level="INFO">Palavra Aleatória Gerada: HO</msg>
+<msg time="2025-04-17T20:43:02.130913" level="INFO">Palavra Aleatória Gerada: YN</msg>
 <arg>Palavra Aleatória Gerada: ${palavra_aleatoria}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-17T20:25:49.426652" elapsed="0.069699"/>
+<status status="PASS" start="2025-04-17T20:43:02.129134" elapsed="0.003015"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2025-04-17T20:25:49.498262" level="INFO">${palavra_aleatoria} = HO</msg>
+<msg time="2025-04-17T20:43:02.133180" level="INFO">${palavra_aleatoria} = YN</msg>
 <arg>${palavra_aleatoria}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2025-04-17T20:25:49.496805" elapsed="0.001744"/>
+<status status="PASS" start="2025-04-17T20:43:02.132532" elapsed="0.000860"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:49.414618" elapsed="0.084191"/>
+<status status="PASS" start="2025-04-17T20:43:02.119600" elapsed="0.014038"/>
 </kw>
 <kw name="Preencher o campo Nome da Diretoria">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-04-17T20:25:49.520490" level="INFO">${NOME_DIRETORIA_GERADA} = P&amp;GHO</msg>
+<msg time="2025-04-17T20:43:02.535922" level="INFO">${NOME_DIRETORIA_GERADA} = P&amp;GYN</msg>
 <var>${NOME_DIRETORIA_GERADA}</var>
 <arg>${NOME_DIRETORIA}${palavra_aleatoria}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-04-17T20:25:49.519935" elapsed="0.000831"/>
+<status status="PASS" start="2025-04-17T20:43:02.534934" elapsed="0.001385"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-17T20:25:49.521453" level="INFO">Nome da Diretoria Gerada: P&amp;GHO</msg>
+<msg time="2025-04-17T20:43:02.537633" level="INFO">Nome da Diretoria Gerada: P&amp;GYN</msg>
 <arg>Nome da Diretoria Gerada: ${NOME_DIRETORIA_GERADA}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-17T20:25:49.521090" elapsed="0.001076"/>
+<status status="PASS" start="2025-04-17T20:43:02.537237" elapsed="0.005959"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:49.523051" level="INFO">Typing text 'P&amp;GHO' into text field 'xpath=(//label[contains(.,'Nome da Diretoria*')]/following::input)[1]'.</msg>
+<msg time="2025-04-17T20:43:02.544339" level="INFO">Typing text 'P&amp;GYN' into text field 'xpath=(//label[contains(.,'Nome da Diretoria*')]/following::input)[1]'.</msg>
 <arg>${INPUT_NOME_DA_DIRETORIA}</arg>
 <arg>${NOME_DIRETORIA_GERADA}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:49.522496" elapsed="1.190750"/>
+<status status="PASS" start="2025-04-17T20:43:02.543720" elapsed="0.886592"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:49.519129" elapsed="1.194689"/>
+<status status="PASS" start="2025-04-17T20:43:02.534122" elapsed="0.896709"/>
 </kw>
 <kw name="Capturar Nome da Diretoria Gerada">
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-04-17T20:25:50.753170" level="INFO">Diretoria Gerada: PAULOPORCARO</msg>
+<msg time="2025-04-17T20:43:03.437947" level="INFO">Diretoria Gerada: PAULOPORCARO</msg>
 <arg>Diretoria Gerada: ${NOME_DIRETORIA_GERADA}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-17T20:25:50.752328" elapsed="0.001622"/>
+<status status="PASS" start="2025-04-17T20:43:03.437261" elapsed="0.001099"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:50.739256" elapsed="0.017984"/>
+<status status="PASS" start="2025-04-17T20:43:03.434622" elapsed="0.004069"/>
 </kw>
 <kw name="Clicar no botão Salvar Cadastro da nova diretoria">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${BOTAO_SALVAR_NOVA_DIRETORIA}</arg>
 <arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-04-17T20:25:50.774942" elapsed="0.107370"/>
+<status status="PASS" start="2025-04-17T20:43:03.444277" elapsed="0.341472"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-04-17T20:25:50.884412" level="INFO">Clicking element 'xpath=//button[contains(.,'SALVAR NOVO')]'.</msg>
+<msg time="2025-04-17T20:43:03.787387" level="INFO">Clicking element 'xpath=//button[contains(.,'SALVAR NOVO')]'.</msg>
 <arg>${BOTAO_SALVAR_NOVA_DIRETORIA}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-17T20:25:50.882846" elapsed="0.227231"/>
+<status status="PASS" start="2025-04-17T20:43:03.786554" elapsed="0.477120"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-17T20:25:56.115322" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-17T20:43:09.265490" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-17T20:25:51.110589" elapsed="5.005468"/>
+<status status="PASS" start="2025-04-17T20:43:04.264460" elapsed="5.001527"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:25:50.774191" elapsed="5.342225"/>
+<status status="PASS" start="2025-04-17T20:43:03.443250" elapsed="5.823032"/>
 </kw>
-<status status="PASS" start="2025-04-17T20:24:53.126956" elapsed="63.009742"/>
+<status status="PASS" start="2025-04-17T20:42:23.632889" elapsed="45.646651"/>
 </test>
-<status status="PASS" start="2025-04-17T20:24:51.767510" elapsed="64.458139"/>
+<status status="PASS" start="2025-04-17T20:42:22.662305" elapsed="46.654872"/>
 </suite>
 <statistics>
 <total>
