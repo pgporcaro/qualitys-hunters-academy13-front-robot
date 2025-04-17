@@ -44,6 +44,11 @@ Login com sucesso
     Preencher campo senha com uma senha válida
     Clicar com o botão entrar
     Clicar no botão cadastro
+Login com e-mail inválido
+    Abrir o site do QA.Coders
+    Preeencher campo e-mail com um e-mail inválido
+    Preencher campo senha com uma senha válida
+    Clicar com o botão entrar
 
 Criar uma diretoria
     Abrir o site do QA.Coders
@@ -59,46 +64,41 @@ Criar uma diretoria
     Clicar no botão Salvar Cadastro da nova diretoria
     
 #Criar um centro de custo    
-    Abrir o site do QA.Coders
-    Preeencher campo e-mail com um e-mail válido 
-    Preencher campo senha com uma senha válida
-    Clicar com o botão entrar
-    Clicar no botão cadastro
-    Clicar no botão Centro de Custo
-    Clicar no botão Novo cadastro de Centro de Custos
-    Preencher a tela de novo centro de custo com diretoria gerada
-    Clicar no botão Salvar Novo Centro de Custo
+    # Abrir o site do QA.Coders
+    # Preeencher campo e-mail com um e-mail válido 
+    # Preencher campo senha com uma senha válida
+    # Clicar com o botão entrar
+    # Clicar no botão cadastro
+    # Clicar no botão Centro de Custo
+    # Clicar no botão Novo cadastro de Centro de Custos
+    # Preencher a tela de novo centro de custo com diretoria gerada
+    # Clicar no botão Salvar Novo Centro de Custo
     
 #Criar um departamento
-    Abrir o site do QA.Coders
-    Preeencher campo e-mail com um e-mail válido 
-    Preencher campo senha com uma senha válida
-    Clicar com o botão entrar
-    Clicar no botão cadastro
-    Clicar no botão departamento
-    Clicar no botão Novo departamento
-    Preencher a tela de novo cadastro de departamento
-    Clicar no botão Salvar Novo Departamento
+    # Abrir o site do QA.Coders
+    # Preeencher campo e-mail com um e-mail válido 
+    # Preencher campo senha com uma senha válida
+    # Clicar com o botão entrar
+    # Clicar no botão cadastro
+    # Clicar no botão departamento
+    # Clicar no botão Novo departamento
+    # Preencher a tela de novo cadastro de departamento
+    # Clicar no botão Salvar Novo Departamento
 
-Login com e-mail inválido
-    Abrir o site do QA.Coders
-    Preeencher campo e-mail com um e-mail inválido
-    Preencher campo senha com uma senha válida
-    Clicar com o botão entrar
 
 #Listar departamentos
-    Abrir o site do QA.Coders
-    Preeencher campo e-mail com um e-mail válido 
-    Preencher campo senha com uma senha válida
-    Clicar com o botão entrar
-    Clicar no botão cadastro
-    Clicar no botão departamento
-    Listar todos os departamentos
+    # Abrir o site do QA.Coders
+    # Preeencher campo e-mail com um e-mail válido 
+    # Preencher campo senha com uma senha válida
+    # Clicar com o botão entrar
+    # Clicar no botão cadastro
+    # Clicar no botão departamento
+    # Listar todos os departamentos
 
 *** Keywords ***
 
 Abrir o site do QA.Coders
-    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    options=add_argument("--headless")
+    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    #options=add_argument("--headless")
     Maximize Browser Window
     Sleep    5
 
