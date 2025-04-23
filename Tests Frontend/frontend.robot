@@ -98,7 +98,7 @@ Criar uma diretoria
 *** Keywords ***
 
 Abrir o site do QA.Coders
-    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    options=add_argument("--headless")
+    Open Browser  ${URL_HOME_QACODERS}    ${BROWSER}    #options=add_argument("--headless")
     Maximize Browser Window
     Sleep    5
 
