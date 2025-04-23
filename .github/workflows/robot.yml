@@ -1,94 +1,67 @@
-name: Robot Framework CI/CD
+name: Testes Robot com Relatorio
 
 on: [push, workflow_dispatch]
 
 jobs:
-  tests:
-    name: Testes Frontend Robot Framework
-    runs-on: ubuntu-24.04
+    tests:
+        name: Testes Robot Framework
+        runs-on: ubuntu-24.04
 
-    steps:
-    - name: Clonar arquivos do repositório
-      uses: actions/checkout@v4
- 
-    - name: Configurar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.11'
- 
-    - name: Instalação das dependencias
-      run: |            
-        pip install robotframework
-        pip install robotframework-requests
-        pip install --upgrade robotframework-seleniumlibrary
-        pip install Faker
+        steps:
+          - name: Clonando o projeto para a maquina virtual
+            uses: actions/checkout@v4
 
-    - name: Install drivers via selenium-manager
-      run: |
-        SELENIUM_MANAGER_EXE=$(python -c 'from selenium.webdriver.common.selenium_manager import SeleniumManager; sm=SeleniumManager(); print(f"{str(sm._get_binary())}")')
-        echo "$SELENIUM_MANAGER_EXE"
-        echo "WEBDRIVERPATH=$($SELENIUM_MANAGER_EXE --browser chrome --debug | awk '/INFO[[:space:]]Driver path:/ {print $NF;exit}')" >> "$GITHUB_ENV"
-        echo "$WEBDRIVERPATH"
+          - name: Configurando o Python na maquina virtual
+            uses: actions/setup-python@v5
+            with:
+              python-version: "3.11"
+          
+          - name: Instalação das dependencias
+            run: |            
+              pip install robotframework
+              pip install robotframework-requests
 
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@latest
-      with:
-        chrome-version: latest
-      id: setup-chrome
-    - run: |
-        echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
-        ${{ steps.setup-chrome.outputs.chrome-path }} --version
+          - name: Executando os testes
+            run: |
+              robot --outputdir results/ .
 
-    - name: Executando os testes de Frontend do Robot
-      run: |
-        mkdir -p ./browser-data
-        robot --variable USER_DATA_DIR:./browser-data/session-$(date +%s) --outputdir results/ .
+          - name: Resultado dos Testes
+            uses: actions/upload-artifact@v4
+            if: always()
+            with:
+                name: resultado-testes
+                path: results
 
-    - name: Test Report
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: robot-framework-report
-        path: results/
-                 
-  deploy:
-    name: Deploy GitHub Pages 🌐
-    runs-on: ubuntu-24.04
-    if: always()
-    needs: 
-      - tests
-              
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages 
-            
-    steps:
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          enablement: true
-              
-      - name: Download Artifacts
-        uses: actions/download-artifact@v4
-        with: 
-          name: robot-framework-report
-          path: results/
-              
-      - name: Verificar existência do report.html
-        run: |
-          if [ ! -f results/report.html ]; then
-            echo "Erro: report.html não encontrado no diretório results/"
-            exit 1
-          fi
-              
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: results/
-              
-      - name: Deploy to Github Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    deploy:
+        name: Deploy to GitHub Pages
+        runs-on: ubuntu-24.04
+        if: always()
+        needs:
+          - tests
+
+        permissions:
+          contents: read
+          pages: write
+          id-token: write
+        environment:
+          name: github-pages
+          url: https://pgporcaro.github.io/qualitys-hunters-academy13-front-robot/report.html
+        
+        steps:
+          - name: Configuração do Site do Resultado do Testes
+            uses: actions/configure-pages@v4
+          
+          - name: Download Resultado dos Testes
+            uses: actions/download-artifact@v4
+            with:
+              name: resultado-testes
+              path: results/
+
+          - name: Upload dos Resultados
+            uses: actions/upload-pages-artifact@v3
+            with:
+              path: results/
+
+          - name: Subindo Pagina de Resultados dos Testes        
+            id: deployment
+            uses: actions/deploy-pages@v4
