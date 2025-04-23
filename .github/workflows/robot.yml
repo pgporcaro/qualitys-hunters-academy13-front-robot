@@ -64,7 +64,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: https://pgporcaro.github.io/frontendQualityhunters2025/report.html
+      url: 
             
     steps:
       - name: Setup Pages
