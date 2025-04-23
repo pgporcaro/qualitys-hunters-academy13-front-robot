@@ -43,13 +43,13 @@ jobs:
       run: |
         mkdir -p ./browser-data
         robot --variable USER_DATA_DIR:./browser-data/session-$(date +%s) --outputdir results/ .
- 
+
     - name: Test Report
       uses: actions/upload-artifact@v4
       if: always()
       with:
         name: robot-framework-report
-        path: results
+        path: results/
                  
   deploy:
     name: Deploy GitHub Pages 🌐
@@ -76,6 +76,13 @@ jobs:
         with: 
           name: robot-framework-report
           path: results/
+              
+      - name: Verificar existência do report.html
+        run: |
+          if [ ! -f results/report.html ]; then
+            echo "Erro: report.html não encontrado no diretório results/"
+            exit 1
+          fi
               
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
