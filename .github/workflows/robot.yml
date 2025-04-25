@@ -33,7 +33,7 @@ jobs:
     - name: Setup Edge
       uses: browser-actions/setup-edge@latest
       with:
-        edge-version: latest
+        edge-version: stable
       id: setup-edge
     - run: |
         echo Installed Edge version: ${{ steps.setup-edge.outputs.edge-version }}
