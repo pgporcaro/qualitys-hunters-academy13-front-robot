@@ -5,7 +5,7 @@ Library  Collections
 
 *** Variables ***
 ${URL_HOME_QACODERS}                    https://qualitys-hunters-front.qacoders.dev.br/login
-${BROWSER}                              chrome
+${BROWSER}                              edge
 ${BROWSER_OPTIONS}                      --user-data-dir=/tmp/unique-session
 ${EMAIL}                                id=email
 ${EMAIL_VALIDO}                         sysadmin@qacoders.com

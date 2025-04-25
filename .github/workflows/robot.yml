@@ -30,14 +30,14 @@ jobs:
         echo "WEBDRIVERPATH=$($SELENIUM_MANAGER_EXE --browser chrome --debug | awk '/INFO[[:space:]]Driver path:/ {print $NF;exit}')" >> "$GITHUB_ENV"
         echo "$WEBDRIVERPATH"
 
-    - name: Setup Chrome
-      uses: browser-actions/setup-chrome@latest
+    - name: Setup Edge
+      uses: browser-actions/setup-edge@latest
       with:
-        chrome-version: latest
-      id: setup-chrome
+        edge-version: latest
+      id: setup-edge
     - run: |
-        echo Installed chromium version: ${{ steps.setup-chrome.outputs.chrome-version }}
-        ${{ steps.setup-chrome.outputs.chrome-path }} --version
+        echo Installed Edge version: ${{ steps.setup-edge.outputs.edge-version }}
+        ${{ steps.setup-edge.outputs.edge-path }} --version
 
     - name: Executando os testes de Frontend do Robot
       run: |
