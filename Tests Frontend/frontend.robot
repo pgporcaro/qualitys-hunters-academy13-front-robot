@@ -63,16 +63,16 @@ Criar uma diretoria
     Capturar Nome da Diretoria Gerada
     Clicar no botão Salvar Cadastro da nova diretoria
     
-#Criar um centro de custo    
-    # Abrir o site do QA.Coders
-    # Preeencher campo e-mail com um e-mail válido 
-    # Preencher campo senha com uma senha válida
-    # Clicar com o botão entrar
-    # Clicar no botão cadastro
-    # Clicar no botão Centro de Custo
-    # Clicar no botão Novo cadastro de Centro de Custos
-    # Preencher a tela de novo centro de custo com diretoria gerada
-    # Clicar no botão Salvar Novo Centro de Custo
+Criar um centro de custo    
+    Abrir o site do QA.Coders
+    Preeencher campo e-mail com um e-mail válido 
+    Preencher campo senha com uma senha válida
+    Clicar com o botão entrar
+    Clicar no botão cadastro
+    Clicar no botão Centro de Custo
+    Clicar no botão Novo cadastro de Centro de Custos
+    Preencher a tela de novo centro de custo com diretoria gerada
+    Clicar no botão Salvar Novo Centro de Custo
     
 #Criar um departamento
     # Abrir o site do QA.Coders
