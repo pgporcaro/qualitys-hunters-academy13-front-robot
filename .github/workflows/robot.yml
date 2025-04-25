@@ -48,8 +48,9 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: robot-framework-report
+        name: robot-framework-report-${{ github.run_id }}
         path: results
+        overwrite: true
                  
   deploy:
     name: Deploy GitHub Pages 🌐
@@ -75,7 +76,7 @@ jobs:
       - name: Download Artifacts
         uses: actions/download-artifact@v4
         with: 
-          name: robot-framework-report
+          name: robot-framework-report-${{ github.run_id }}
           path: results/
               
       - name: Upload artifact
