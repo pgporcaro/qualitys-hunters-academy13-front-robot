@@ -46,13 +46,7 @@ Antes de executar os testes, certifique-se de que você tem os seguintes requisi
 
 - **Git**: Para clonar este repositório. 💻
 
-- Azure : Gerenciador de projetos
-  
-- Swagger : desenvolve as API
 
-- YML.py : 
-
-- VsCode, ou outra IDE de sua preferência
 
 
 
