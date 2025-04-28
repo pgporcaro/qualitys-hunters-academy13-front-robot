@@ -120,7 +120,7 @@ Para executar os testes de Frontend no Robot Framework, siga estas etapas:
 
 - [Beatriz Ferreira Franco]    (https://github.com/BeatrizFFranco)
 
-- [Fernanda Ferreira dos Santos] 
+- [Fernanda Ferreira dos Santos]    (https://github.com/20220512)
 
 - [Luciene Lima Watzel] (https://github.com/Luciene-Watzel)
 
