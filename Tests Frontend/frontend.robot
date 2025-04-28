@@ -147,7 +147,7 @@ Clicar no botão nova diretorias
 
 Preencher o campo Nome da Diretoria
     # Concatenar o nome base da diretoria com a palavra aleatória
-    ${NOME_DIRETORIA_GERADA}    Set Variable    ${NOME_DIRETORIA}${palavra_aleatoria}
+    ${NOME_DIRETORIA_GERADA}    Set Variable    ${NOME_DIRETORIA}    ${palavra_aleatoria}
     # Log para verificar o nome completo gerado
     Log    Nome da Diretoria Gerada: ${NOME_DIRETORIA_GERADA}
     # Preencher o campo com o nome gerado
