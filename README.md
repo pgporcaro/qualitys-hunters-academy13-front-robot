@@ -46,11 +46,11 @@ Antes de executar os testes, certifique-se de que você tem os seguintes requisi
 
 - **Git**: Para clonar este repositório. 💻
 
-- Azure
+- Azure : Gerenciador de projetos
   
-- Swagger
+- Swagger : desenvolve as API
 
-- YML.py
+- YML.py : 
 
 - VsCode, ou outra IDE de sua preferência
 
