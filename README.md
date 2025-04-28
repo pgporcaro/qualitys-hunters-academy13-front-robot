@@ -50,7 +50,7 @@ Antes de executar os testes, certifique-se de que você tem os seguintes requisi
   
 - Swagger
 
-- PYYAML
+- YML.py
 
 - VsCode, ou outra IDE de sua preferência
 
